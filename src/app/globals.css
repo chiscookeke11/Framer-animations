@@ -24,3 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  height: 150%;
+  left: -25%;
+  width: 150%;
+  background: conic-gradient(
+    rgba(244, 114, 182, 0.4) 0deg,
+    rgba(192, 132, 252, 0.4) 0deg,
+    transparent 80deg
+  );
+  transform: rotate(0);
+  animation: spin 3s linear infinite;
+}
+
+
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+
+}
