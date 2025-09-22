@@ -41,14 +41,24 @@ body {
   animation: spin 3s linear infinite;
 }
 
-
-
 @keyframes spin {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
+}
 
+body {
+  transition-property: opacity, background-color, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-transition {
+  opacity: 0;
+  background-color: pink;
+  transform: translateY(40px);
+  filter: blur(12px);
 }
